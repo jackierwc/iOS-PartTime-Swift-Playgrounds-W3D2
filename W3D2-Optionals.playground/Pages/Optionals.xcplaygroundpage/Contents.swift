@@ -32,7 +32,7 @@ var convertedNum = Double(numberString) //convert numberString to a Double
 //:
 //: So now let's try to add 1 to our `convertedNum` variable.
 
-//convertedNum = convertedNum + 1 // uncomment this line!
+// convertedNum = convertedNum + 1 // uncomment this line!
 
 //: Looks like the compiler doesn't like that! It's giving us a cryptic error about applying binary operators and types and things, and offers the suggestion of adding an exclaimation point!
 //:
@@ -48,6 +48,7 @@ var convertedNum = Double(numberString) //convert numberString to a Double
 
 var inputString = "hello"
 // try to convert inputString to an Int here:
+var intString = Int(inputString)
 
 
 //: If you've done everything right you should see "nil" along the right-hand gutter of the playground. This is what we use to represent "nothing". Only optional variables can have a value of `nil`.
@@ -60,8 +61,8 @@ var inputString = "hello"
 //:
 //: Then, change the string "1" to "🔥" and observe how the playground responds (or doesn't respond)
 
-var number = Int("1")
-// number + 1 // uncomment and fix this.
+var number = Int("6")
+//number! + 1 // uncomment and fix this.
 
 
 //: In general, force unwrapping is always a risk for a crash, and should be used sparingly and with caution.
@@ -90,7 +91,13 @@ if let unwrapped = number {
 
 var greeting: String? = "Aloha!"
 
+if let greetUnwrap = greeting {
+    print(greetUnwrap)
+} else {
+    print("no greeting")
+}
 
+// or can use greeting = greeting
 //: ## One last thing...
 //:
 //: Have a look at the following code:
